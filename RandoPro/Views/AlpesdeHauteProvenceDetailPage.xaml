@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="RandoPro.Views.AlpesdeHauteProvenceDetailPage"
+              xmlns:converters="clr-namespace:RandoPro.Converters"
+             Title="Alpes de Haute Provence">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ColorHexStringToMAUIColorConverter x:Key="ColorHexStringToMAUIColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+     
+        <StackLayout Margin="20">
+            <Label Text="{Binding AlpesdeHauteProvence.Name}" 
+                   HorizontalOptions="Center" 
+                   Style="{DynamicResource TitleStyle}" />
+            <!--<Label Text="{Binding AlpesdeHauteProvence.Location}" 
+                   FontAttributes="Italic" 
+                   HorizontalOptions="Center" />-->
+            <Image Source="{Binding AlpesdeHauteProvence.Image}" 
+                   HeightRequest="300" 
+                   WidthRequest="400" 
+                   HorizontalOptions="Center" />
+            <Button WidthRequest="150"
+                   Text="Images" 
+                   Command="{Binding TapCommand}" 
+                   CommandParameter="{Binding AlpesdeHauteProvence.Images}"
+                   BackgroundColor="{StaticResource Primary}"
+                   TextColor="White" />    
+            <Label Text="Niveau"
+                   CharacterSpacing="3"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,-10"/>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="1"
+                       TextColor="#66b32f"
+                       FontAttributes="Bold"
+                       Margin="0,0,10,0"
+                       HorizontalOptions="Center"/>
+                <Label Text="2"
+                       TextColor="#f2a82f"
+                       FontAttributes="Bold"
+                       Margin="0,0,10,0"
+                       HorizontalOptions="Center"/>
+                <Label Text="3" 
+                       TextColor="#ff0000"
+                       FontAttributes="Bold"
+                       Margin="0,0,10,0"
+                       HorizontalOptions="Center"/>
+                <Label Text="4"
+                       TextColor="#660000"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"/>
+            </HorizontalStackLayout>
+            <Image Source = "hiking.png"
+                    BackgroundColor = "{Binding AlpesdeHauteProvence.NiveauColor, Converter={StaticResource ColorHexStringToMAUIColorConverter}}"
+                    HeightRequest = "30"
+                    HorizontalOptions = "Center"
+                    WidthRequest = "70" />
+            <Label Text="{Binding AlpesdeHauteProvence.Distance, StringFormat='Distance: {0}km'}" 
+                   Style="{DynamicResource BodyStyle}" 
+                   HorizontalOptions="Center"/>
+            <Label Text="{Binding AlpesdeHauteProvence.Denivele,  StringFormat='Dénivelé: {0}m' }" 
+                   Style="{DynamicResource BodyStyle}" 
+                   HorizontalOptions="Center"/>
+
+            <Button         WidthRequest="150"
+                            Text="Map" 
+                            Command="{Binding TapCommand}"
+                            CommandParameter="{Binding AlpesdeHauteProvence.Map}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />
+            <!--<Button         WidthRequest="150"
+                            Text="gpxTrack" 
+                            Command="{Binding TapCommand}"
+                            CommandParameter="{Binding AlpesdeHauteProvenceAlpesdeHauteProvence.gpxTrack}"
+                            BackgroundColor="{StaticResource Primary}"
+                            TextColor="White" />-->
+        </StackLayout>
+     
+</ContentPage>
