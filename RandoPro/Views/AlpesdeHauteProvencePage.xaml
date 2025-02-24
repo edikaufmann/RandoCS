@@ -31,10 +31,10 @@
                                       Randos="{x:Static data:AlpesdeHauteProvenceData.AlpesdeHauteProvence}"
                                       SelectedItemNavigationTarget="{x:Type views:AlpesdeHauteProvenceDetailPage}" />
     </Shell.SearchHandler>
-   
     <CollectionView Margin="20"
-                    ItemsSource="{x:Static data:AlpesdeHauteProvenceData.AlpesdeHauteProvence}"
-                    ItemTemplate="{StaticResource RandoTemplate}"
-                    SelectionMode="Single"
-                    SelectionChanged="OnCollectionViewSelectionChanged" />
+                ItemsSource="{x:Static data:AlpesdeHauteProvenceData.AlpesdeHauteProvence}"
+                ItemTemplate="{StaticResource RandoTemplate}"
+                SelectionMode="Single"
+                SelectionChanged="OnCollectionViewSelectionChanged" />
+
 </ContentPage>

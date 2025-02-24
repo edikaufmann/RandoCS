@@ -23,15 +23,15 @@
             </Setter>
         </Style>
     </ContentPage.Resources>
-    
+
     <Shell.SearchHandler>
         <controls:RandoSearchHandler Placeholder="Enter search term"
-                                      ShowsResults="true"
-                                      ItemTemplate="{StaticResource RandoSearchTemplate}"
-                                      Randos="{x:Static data:VARHauteData.VARHaute}"
-                                      SelectedItemNavigationTarget="{x:Type views:VARHauteDetailPage}" />
+                                  ShowsResults="true"
+                                  ItemTemplate="{StaticResource RandoSearchTemplate}"
+                                  Randos="{x:Static data:VARHauteData.VARHaute}"
+                                  SelectedItemNavigationTarget="{x:Type views:VARHauteDetailPage}" />
     </Shell.SearchHandler>
-   
+
     <CollectionView Margin="20"
                     ItemsSource="{x:Static data:VARHauteData.VARHaute}"
                     ItemTemplate="{StaticResource RandoTemplate}"

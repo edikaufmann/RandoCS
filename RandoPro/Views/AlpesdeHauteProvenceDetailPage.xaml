@@ -24,7 +24,7 @@
             <Button WidthRequest="150"
                    Text="Images" 
                    Command="{Binding TapCommand}" 
-                   CommandParameter="{Binding AlpesdeHauteProvence.Images}"
+                   CommandParameter="{Binding AlpesdeHauteProvence.Photos}"
                    BackgroundColor="{StaticResource Primary}"
                    TextColor="White" />    
             <Label Text="Niveau"

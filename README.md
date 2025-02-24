@@ -11,6 +11,7 @@ urlFragment: fundamentals-shell
 ---
 
 RandoCS
+
 - Using the Shell sample to learn .net Maui.
 - This RandoGIT sample shows 2 (test) hikes I made in the Provence, France. 
 

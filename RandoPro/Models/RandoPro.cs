@@ -14,8 +14,8 @@
         public string Denivele { get; set; }
         //public string Niveau { get; set; }
         public string Color { get; set; }
-        //public double lat { get; set; }
-        //public double lon { get; set; }
+        public double lat { get; set; }
+        public double lon { get; set; }
         public string Map { get; set; }
     }
 }

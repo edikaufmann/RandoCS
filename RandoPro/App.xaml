@@ -24,7 +24,7 @@
             <DataTemplate x:Key="RandoTemplate">
                 <Grid Padding="10"
                       RowDefinitions="Auto,Auto"
-                      ColumnDefinitions="Auto,Auto">
+                      ColumnDefinitions="0.15*,0.85*">
                     <Image Grid.RowSpan="2"
                            Source="{Binding Image}"
                            Aspect="AspectFill"
@@ -40,7 +40,6 @@
                 </Grid>
             </DataTemplate>
             <!--Text="{Binding Distance, StringFormat='Distance: {0}km'}"-->
-
             <DataTemplate x:Key="RandoSearchTemplate">
                 <Grid Padding="10"
                       ColumnDefinitions="0.15*,0.85*">
@@ -48,11 +47,13 @@
                            HeightRequest="40"
                            WidthRequest="40" />
                     <Label Grid.Column="1"
-                           Text="{Binding Name}"
+                           Text="{Binding Area}"
                            FontAttributes="Bold"
                            VerticalOptions="Center" />
                 </Grid>
             </DataTemplate>
+
+
 
         </ResourceDictionary>
     </Application.Resources>
